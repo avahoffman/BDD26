@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+This content was created by [Ava Hoffman](https://github.com/avahoffman) for [Baltimore Data Day 2026](https://bniajfi.org/data_day/).
+
+You can find the source files for this Workshop at <https://github.com/avahoffman/BDD26>.
