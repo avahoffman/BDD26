@@ -87,6 +87,8 @@ The "value" column is the number of people with a library card per 1,000 residen
 bnia_lib_pct <- bnia_lib_year |> mutate(value = (value / 1000) * 100) 
 ```
 
+> Try adding a comma (,) to the 1000 on line 87. Do you get an error?
+
 ## Plotting Data
 
 `ggplot()` is a powerful function for plotting data. You specify the x and y axes, as well as any groupings you are interested in.
@@ -101,17 +103,21 @@ The years look a bit funky! Let's specify the tick marks.
 ```{r}
 ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020)) +
   geom_line() + 
-  scale_x_continuous(breaks = 2011:2022)
+  scale_x_continuous(breaks = 2011:2020)
 ```
+
+> On lines 106 and 116, change the breaks to include the most recent year.
 
 Let's add a label too.
 
 ```{r}
 ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020)) +
   geom_line() + 
-  scale_x_continuous(breaks = 2011:2022) +
-  ylab("% of People with a Library Card")
+  scale_x_continuous(breaks = 2011:2020) +
+  ylab("% residents")
 ```
+
+> On line 117, change the y axis text to be "% of Residents with a Library Card".
 
 ## Summarize the Data
 
@@ -121,4 +127,4 @@ We can get the mean percent of residents with a library card across these neighb
 bnia_lib_pct |> group_by(year) |> summarize(mean(value))
 ```
 
-> Instead of grouping by "year" on line 121, try grouping by Community Statistical Area ("CSA2020").
+> Instead of grouping by "year" on line 127, try grouping by Community Statistical Area ("CSA2020").
