@@ -9,7 +9,7 @@ This activity is meant to guide you through some R fundamentals so you can get s
 You will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features. 
 
 - [Download and Install R](http://cran.us.r-project.org/).
-- [Downlaod and Install RStudio](https://posit.co/download/rstudio-desktop/).
+- [Download and Install RStudio](https://posit.co/download/rstudio-desktop/).
 
 If you work on a Windows machine, you might also need to install [R Tools](https://cran.r-project.org/bin/windows/Rtools/). 
 
