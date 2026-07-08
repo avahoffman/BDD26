@@ -1,0 +1,124 @@
+---
+title: "BDD Intro to R"
+output: html_document
+---
+
+## Running Code
+
+To run code found here, press the green play button to the right of the code, or use the shortcut ctrl+return (Windows) cmd+return (Mac).
+
+Run the following code, which should equal 2.
+
+```{r}
+1 + 1
+```
+
+Try changing the numbers above and running the code again.
+
+This is an RMarkdown file. It allows you to mix code and free text.
+
+## Install `tidyverse`
+
+Tidyverse is an add-on bundle of software called a "package". It contains useful "functions" for data analysis.
+
+You only need to install tidyverse once per major release of R.
+
+```{r echo=FALSE, message = FALSE}
+install.packages("tidyverse")
+```
+
+But you will need to load it every time you start R.
+
+```{r}
+library(tidyverse)
+```
+
+## Import Data
+
+`read_csv()` is a function that helps you read in data. Paste this link in your browser to download some data from BNIA.
+
+```{r}
+bnia_lib <- read_csv("Number_of_Persons_with_Library_Cards_per_1,000_Residents_-_Community_Statistical_Area.csv")
+```
+
+Check out your Environment pane. You now have a data object to work with! Click on the object in the Environment to view the data in tabular form.
+
+## Subset Data
+
+`filter()` will keep only rows of data you are interested in. We will filter the column `CSA2020` for only a few neighborhoods.
+
+When you run the code below, you are creating another object that is a subset of the original data.
+
+```{r}
+bnia_lib_sub <- bnia_lib |> filter(CSA2020 %in% c("Canton", "Cherry Hill", "Midway/Coldstream", "Pigtown/Carroll Park"))
+```
+
+> Try changing the neighborhoods on line 53 and running the code again.
+
+## Reshaping Data
+
+Data in "Long format" is easier for R to work with. Let's convert the data into long format. Here, we are collapsing every column that starts with "libcard" into a single column called "year".
+
+```{r}
+bnia_lib_long <- bnia_lib_sub |> pivot_longer(starts_with("libcard"), names_to = "year")
+```
+
+Inspect the data by clicking on the `bnia_lib_long` object. How is it different from `bnia_lib_sub`?
+
+## Cleaning Data
+
+We want to convert values like "libcard11" to "2011".
+
+`mutate()` helps create new or updated cleaned columns. Below, we will update "year" by replacing "libcard" with "20".
+
+```{r}
+bnia_lib_year <- bnia_lib_long |> mutate(year = str_replace(year, "libcard", "20"))
+```
+
+We also want to make sure R knows that the years are numbers, not text ("character" class) data. We can use `as.numeric()` to force this.
+
+```{r}
+bnia_lib_year <- bnia_lib_year |> mutate(year = as.numeric(year))
+```
+
+The "value" column is the number of people with a library card per 1,000 residents. Let's make that a percentage.
+
+```{r}
+bnia_lib_pct <- bnia_lib_year |> mutate(value = (value / 1000) * 100) 
+```
+
+## Plotting Data
+
+`ggplot()` is a powerful function for plotting data. You specify the x and y axes, as well as any groupings you are interested in.
+
+```{r}
+ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020)) +
+  geom_line()
+```
+
+The years look a bit funky! Let's specify the tick marks.
+
+```{r}
+ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020)) +
+  geom_line() + 
+  scale_x_continuous(breaks = 2011:2022)
+```
+
+Let's add a label too.
+
+```{r}
+ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020)) +
+  geom_line() + 
+  scale_x_continuous(breaks = 2011:2022) +
+  ylab("% of People with a Library Card")
+```
+
+## Summarize the Data
+
+We can get the mean percent of residents with a library card across these neighborhoods per year using `group_by()` and `summarize()`.
+
+```{r}
+bnia_lib_pct |> group_by(year) |> summarize(mean(value))
+```
+
+> Instead of grouping by "year" on line 121, try grouping by Community Statistical Area ("CSA2020").

@@ -44,7 +44,7 @@ We will create an "R Project" to stay organized. You can create many more later.
 
 Now we will transition to the activities, which are actually in the code files!
 
-- Download [This file](https://www.avahoffman.com/BDD26/BDD.Rmd).
+- Download [This file](https://www.avahoffman.com/BDD26/Intro.Rmd).
 - Download [This BNIA data about library cards](https://www.avahoffman.com/BDD26/Number_of_Persons_with_Library_Cards_per_1,000_Residents_-_Community_Statistical_Area.csv).  [(source)](https://vital-signs-bniajfi.hub.arcgis.com/datasets/bniajfi::number-of-persons-with-library-cards-per-1000-residents-1/explore?layer=0&location=39.309794%2C-76.594879%2C13.82)
 - Move the downloaded files to the directory you created above.
 - Open `BDD.Rmd` in RStudio (File > Open File or simply double-click).

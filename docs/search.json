@@ -11,7 +11,7 @@
     "href": "index.html#installing-r-and-rstudio",
     "title": "Intro to R - Baltimore Data Day 2026",
     "section": "Installing R and RStudio",
-    "text": "Installing R and RStudio\nYou will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.\n\nDownload and Install R.\nDownlaod and Install RStudio.\n\nIf you work on a Windows machine, you might also need to install R Tools."
+    "text": "Installing R and RStudio\nYou will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.\n\nDownload and Install R.\nDownload and Install RStudio.\n\nIf you work on a Windows machine, you might also need to install R Tools."
   },
   {
     "objectID": "index.html#navigate-rstudio",
