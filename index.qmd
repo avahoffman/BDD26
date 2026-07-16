@@ -4,7 +4,7 @@ title: "Intro to R - Baltimore Data Day 2026"
 
 Thanks for being here! This activity is meant to guide you through some R fundamentals so you can get started on your data journey.
 
-## Installing R and RStudio
+## 🔧 Installing R and RStudio
 
 You will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.
 
@@ -13,7 +13,7 @@ You will need to install R. RStudio is a development environment for running R. 
 
 If you work on a Windows machine, you might also need to install [R Tools](https://cran.r-project.org/bin/windows/Rtools/).
 
-## Navigate RStudio
+## 🔎 Navigate RStudio
 
 Locate the following in RStudio:
 
@@ -30,17 +30,17 @@ knitr::include_graphics("img/environment.png")
 
 Read more about the RStudio user interface [here](https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html).
 
-## Organize your files
+## 📂 Organize your files
 
 We will create an "R Project" to stay organized. You can create many more later.
 
 - Go to File \> New Project...
 - Select "New Directory".
 - Select "New Project".
-- Provide a Directory name, such as "Intro to R".
-- Pick a reasonable location, such as your Documents folder.
+- Provide a directory name, such as "Intro to R".
+- Pick a reasonable location, such as your "Documents" folder.
 
-## Intro to R Activity
+## 💻 Intro to R Activity
 
 Now we will transition to the activities, which are actually in the code files!
 
@@ -49,4 +49,12 @@ Now we will transition to the activities, which are actually in the code files!
 - Move the downloaded files to the directory you created above.
 - Open `BDD.Rmd` in RStudio (File \> Open File or simply double-click).
 
-## Wrap up
+## 🏁 Wrap up
+
+We'd love to hear what you liked/didn't like about this workshop.
+
+🗣 [Give us feedback via Google Forms](https://docs.google.com/forms/d/e/1FAIpQLScyNIczFYMvaQ1YPUjHzv1xHmjlQNveevLhXJZ3uTC-mGg5ww/viewform?usp=dialog).
+
+```{r, out.width = "40%", echo = FALSE}
+knitr::include_graphics("img/survey.png")
+```
