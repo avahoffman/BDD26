@@ -2,16 +2,16 @@
 title: "Intro to R - Baltimore Data Day 2026"
 ---
 
-This activity is meant to guide you through some R fundamentals so you can get started on your data journey!
+Thanks for being here! This activity is meant to guide you through some R fundamentals so you can get started on your data journey.
 
 ## Installing R and RStudio
 
-You will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features. 
+You will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.
 
 - [Download and Install R](http://cran.us.r-project.org/).
 - [Download and Install RStudio](https://posit.co/download/rstudio-desktop/).
 
-If you work on a Windows machine, you might also need to install [R Tools](https://cran.r-project.org/bin/windows/Rtools/). 
+If you work on a Windows machine, you might also need to install [R Tools](https://cran.r-project.org/bin/windows/Rtools/).
 
 ## Navigate RStudio
 
@@ -34,7 +34,7 @@ Read more about the RStudio user interface [here](https://docs.posit.co/ide/user
 
 We will create an "R Project" to stay organized. You can create many more later.
 
-- Go to File > New Project...
+- Go to File \> New Project...
 - Select "New Directory".
 - Select "New Project".
 - Provide a Directory name, such as "Intro to R".
@@ -44,7 +44,9 @@ We will create an "R Project" to stay organized. You can create many more later.
 
 Now we will transition to the activities, which are actually in the code files!
 
-- Download [This file](https://www.avahoffman.com/BDD26/Intro.Rmd).
-- Download [This BNIA data about library cards](https://www.avahoffman.com/BDD26/Number_of_Persons_with_Library_Cards_per_1,000_Residents_-_Community_Statistical_Area.csv).  [(source)](https://vital-signs-bniajfi.hub.arcgis.com/datasets/bniajfi::number-of-persons-with-library-cards-per-1000-residents-1/explore?layer=0&location=39.309794%2C-76.594879%2C13.82)
+- Download [BDD.Rmd](https://www.avahoffman.com/BDD26/BDD.Rmd).
+- Download [This BNIA data about library cards](https://www.avahoffman.com/BDD26/Number_of_Persons_with_Library_Cards_per_1,000_Residents_-_Community_Statistical_Area.csv). [(source)](https://vital-signs-bniajfi.hub.arcgis.com/datasets/bniajfi::number-of-persons-with-library-cards-per-1000-residents-1/explore?layer=0&location=39.309794%2C-76.594879%2C13.82)
 - Move the downloaded files to the directory you created above.
-- Open `BDD.Rmd` in RStudio (File > Open File or simply double-click).
+- Open `BDD.Rmd` in RStudio (File \> Open File or simply double-click).
+
+## Wrap up
