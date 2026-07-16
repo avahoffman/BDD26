@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Intro to R - Baltimore Data Day 2026",
     "section": "",
-    "text": "This activity is meant to guide you through some R fundamentals so you can get started on your data journey!"
+    "text": "Thanks for being here! This activity is meant to guide you through some R fundamentals so you can get started on your data journey."
   },
   {
     "objectID": "index.html#installing-r-and-rstudio",
@@ -39,14 +39,14 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "R reference card\nR introductory guide\nR jargon\nR terminology\nWhat is the Tidyverse/what packages are in it?\nWhere do package names come from?\nLawlor et al. 2022: Ten simple rules for teaching yourself R"
+    "text": "Check out my Intro to R Youtube Channel! These feature lessons from courses I teach through National Institutes of Health and Johns Hopkins University."
   },
   {
     "objectID": "resources.html#getting-started",
     "href": "resources.html#getting-started",
     "title": "Resources",
-    "section": "",
-    "text": "R reference card\nR introductory guide\nR jargon\nR terminology\nWhat is the Tidyverse/what packages are in it?\nWhere do package names come from?\nLawlor et al. 2022: Ten simple rules for teaching yourself R"
+    "section": "Getting started",
+    "text": "Getting started\n\nR reference card\nR introductory guide\nR jargon\nR terminology\nWhat is the Tidyverse/what packages are in it?\nWhere do package names come from?\nLawlor et al. 2022: Ten simple rules for teaching yourself R"
   },
   {
     "objectID": "resources.html#troubleshooting-guides",
@@ -96,5 +96,54 @@
     "title": "About",
     "section": "",
     "text": "This content was created by Ava Hoffman for Baltimore Data Day 2026.\nYou can find the source files for this Workshop at https://github.com/avahoffman/BDD26."
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Help",
+    "section": "",
+    "text": "The following are very common new user errors. More can be found on the Data Science for Environmental Health Error FAQ page."
+  },
+  {
+    "objectID": "help.html#rtools",
+    "href": "help.html#rtools",
+    "title": "Help",
+    "section": "RTools",
+    "text": "RTools\nMany core Tidyverse packages (such as dplyr and readr) outsource computationally and memory-intensive tasks to C++. This makes things faster but unfortunately, requires some additional software. This is where Rtools comes in. Not all packages need it; just the ones that use C, C++ or Fortran code.\nIf you get an error like this, it means you still need to install it.\n*WARNING: Rtools is required to build R packages but is not currently installed. \nPlease download and install the appropriate version of Rtools before proceeding:\nhttps://cran.rstudio.com/bin/windows/Rtools/\n\nDownload the Rtools45 installer\nFind the file that just downloaded\nDouble click to start installation\nClose and reopen RStudio\n\n\n\n\n\n\n\nNote\n\n\n\nIf running an older version of R, you might need to choose from the different versions of Rtools."
+  },
+  {
+    "objectID": "help.html#error-attempt-to-use-zero-length-variable-name",
+    "href": "help.html#error-attempt-to-use-zero-length-variable-name",
+    "title": "Help",
+    "section": "Error: attempt to use zero-length variable name",
+    "text": "Error: attempt to use zero-length variable name\nUsually, this means that a code chunk inside an .Rmd file was messed up. Example with a tick mark deleted:"
+  },
+  {
+    "objectID": "resources.html#lectures",
+    "href": "resources.html#lectures",
+    "title": "Resources",
+    "section": "",
+    "text": "Check out my Intro to R Youtube Channel! These feature lessons from courses I teach through National Institutes of Health and Johns Hopkins University."
+  },
+  {
+    "objectID": "resources.html#videos",
+    "href": "resources.html#videos",
+    "title": "Resources",
+    "section": "",
+    "text": "Check out my Intro to R Youtube Channel! These feature lessons from courses I teach through National Institutes of Health and Johns Hopkins University."
+  },
+  {
+    "objectID": "help.html#issues-readingfinding-data",
+    "href": "help.html#issues-readingfinding-data",
+    "title": "Help",
+    "section": "Issues reading/finding data",
+    "text": "Issues reading/finding data\nIf you are really struggling to find data on your machine, or are not able to set up an R Project correctly, you can alternatively read data in directly from my website using a url:\nbnia_lib &lt;- read_csv(\"https://avahoffman.com/BDD26/data.csv\")"
+  },
+  {
+    "objectID": "index.html#wrap-up",
+    "href": "index.html#wrap-up",
+    "title": "Intro to R - Baltimore Data Day 2026",
+    "section": "Wrap up",
+    "text": "Wrap up"
   }
 ]
