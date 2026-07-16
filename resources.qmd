@@ -65,6 +65,8 @@ Check out my [Intro to R Youtube Channel](https://www.youtube.com/@IntroductionT
 
 ### Online Courses and Resources
 
+- [Data Science for Environmental Health](https://daseh.org/index.html) - DaSEH is tailored for beginners and novices in R programming, offering instruction on importing, wrangling, visualizing, and analyzing data
+- [https://jhudatascience.org/intro_to_r/](Introduction to R for Public Health Researchers) - Our course at JHU's School of Public Health
 - [Tidyverse Skills for Data Science Book](https://jhudatascience.org/tidyversecourse/) (**a great next step** to learn more about the tidyverse, some modeling, and machine learning)
 - [Tidyverse Skills for Data Science Course](https://www.coursera.org/specializations/tidyverse-data-science-r) (same content with quizzes, can get certificate with \$)
 - [Open Case Studies](https://www.opencasestudies.org/)\
