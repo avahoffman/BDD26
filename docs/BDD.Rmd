@@ -1,8 +1,3 @@
----
-title: "BDD Intro to R"
-output: html_document
----
-
 ## Running Code
 
 To run code found here, press the green play button to the right of the code, or use the shortcut ctrl+return (Windows) cmd+return (Mac).
@@ -53,7 +48,7 @@ When you run the code below, you are creating another object that is a subset of
 bnia_lib_sub <- bnia_lib |> filter(CSA2020 %in% c("Canton", "Cherry Hill", "Midway/Coldstream", "Pigtown/Carroll Park"))
 ```
 
-> Try changing the neighborhoods on line 53 and running the code again.
+> Try changing the neighborhoods on line 48 and running the code again.
 
 ## Reshaping Data
 
@@ -87,7 +82,7 @@ The "value" column is the number of people with a library card per 1,000 residen
 bnia_lib_pct <- bnia_lib_year |> mutate(value = (value / 1000) * 100) 
 ```
 
-> Try adding a comma (,) to the 1000 on line 87. Do you get an error?
+> Try adding a comma (,) to the 1000 on line 82. Do you get an error?
 
 ## Plotting Data
 
@@ -106,7 +101,7 @@ ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020))
   scale_x_continuous(breaks = 2011:2020)
 ```
 
-> On lines 106 and 116, change the breaks to include the most recent year.
+> On lines 101 and 111, change the breaks to include the most recent year.
 
 Let's add a label too.
 
@@ -117,7 +112,7 @@ ggplot(bnia_lib_pct, aes(x = year, y = value, group = CSA2020, color = CSA2020))
   ylab("% residents")
 ```
 
-> On line 117, change the y axis text to be "% of Residents with a Library Card".
+> On line 112, change the y axis text to be "% of Residents with a Library Card".
 
 ## Summarize the Data
 
@@ -127,4 +122,4 @@ We can get the mean percent of residents with a library card across these neighb
 bnia_lib_pct |> group_by(year) |> summarize(mean(value))
 ```
 
-> Instead of grouping by "year" on line 127, try grouping by Community Statistical Area ("CSA2020").
+> Instead of grouping by "year" on line 122, try grouping by Community Statistical Area ("CSA2020").
